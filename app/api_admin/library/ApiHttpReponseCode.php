@@ -2,7 +2,7 @@
 
 namespace app\api_admin\library;
 
-use app\cigoadmin\library\HttpReponseCode;
+use cigoadmin\library\HttpReponseCode;
 
 /**
  * Http相应状态码

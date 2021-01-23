@@ -3,7 +3,7 @@ declare (strict_types=1);
 
 namespace app\api_clietn\library;
 
-use app\cigoadmin\library\traites\ApiCommon;
+use cigoadmin\library\traites\ApiCommon;
 
 /**
  * 登录及权限管理

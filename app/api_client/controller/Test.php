@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace app\api_client\controller;
 
-use app\cigoadmin\controller\UploadCloud;
+use cigoadmin\controller\UploadCloud;
 
 class Test
 {

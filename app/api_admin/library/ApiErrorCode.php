@@ -2,7 +2,7 @@
 
 namespace app\api_admin\library;
 
-use app\cigoadmin\library\ErrorCode;
+use cigoadmin\library\ErrorCode;
 
 /**
  * Api接口错误码

@@ -6,7 +6,7 @@ namespace app\api_admin\controller\v1;
 use app\api_admin\controller\CommonV1;
 use app\api_admin\library\ApiErrorCode;
 use app\api_admin\library\ApiHttpReponseCode;
-use app\cigoadmin\controller\Menu as TraitMenu;
+use cigoadmin\controller\Menu as TraitMenu;
 
 class Menu extends CommonV1
 {

@@ -4,7 +4,7 @@ declare (strict_types=1);
 namespace app\api_admin\controller;
 
 use app\api_admin\library\ApiBase;
-use app\cigoadmin\library\traites\CheckArgs;
+use cigoadmin\library\traites\CheckArgs;
 
 /**
  * V1版本公共基类

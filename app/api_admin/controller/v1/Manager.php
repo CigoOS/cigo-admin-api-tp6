@@ -6,7 +6,7 @@ namespace app\api_admin\controller\v1;
 use app\api_admin\controller\CommonV1;
 use app\api_admin\library\ApiErrorCode;
 use app\api_admin\library\ApiHttpReponseCode;
-use app\cigoadmin\controller\Manager as TraitManager;
+use cigoadmin\controller\Manager as TraitManager;
 use Think\Exception;
 
 class Manager extends CommonV1
