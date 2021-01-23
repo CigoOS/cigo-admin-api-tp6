@@ -20,12 +20,6 @@
     "php": ">=7.1.0",
     "cigoos/cigo-admin-api-core-tp6": "dev-master"
   },
-  "repositories": {
-    "cigoos": {
-      "type": "path",
-      "url": "../cigo-admin-api-core-tp6"
-    }
-  },
   "autoload": {
     "psr-4": {
       "app\\": "app"
