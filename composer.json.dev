@@ -15,10 +15,17 @@
   ],
   "homepage": "https://www.cigoadmin.com",
   "description": "西谷后台-后端接口:thinkphp-v6版本",
+  "minimum-stability": "dev",
   "require": {
     "php": ">=7.1.0",
     "cigoos/cigo-admin-api-core-tp6": "dev-master",
     "topthink/think-multi-app": "^1.0"
+  },
+  "repositories": {
+    "cigoos": {
+      "type": "path",
+      "url": "../cigo-admin-api-core-tp6"
+    }
   },
   "autoload": {
     "psr-4": {
