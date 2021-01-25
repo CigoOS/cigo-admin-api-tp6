@@ -1,4 +1,5 @@
 <?php
+
 use think\facade\Request;
 
 return [
@@ -33,13 +34,13 @@ return [
 
     /* 七牛云配置参数 */
     'qiniu_cloud'         => [
-        'AccessKey'                => env('qiniu_cloud.access_key', ''),
-        'SecretKey'                => env('qiniu_cloud.secret_key', ''),
+        'AccessKey'                => env('qiniu-cloud.access-key', ''),
+        'SecretKey'                => env('qiniu-cloud.secret-key', ''),
         'host'                     => 'upload-z2.qiniup.com',
-        'tokenExpireTime'          => env('qiniu_cloud.link_timeout', 3600),
+        'tokenExpireTime'          => env('qiniu-cloud.link-timeout', 3600),
         'returnBody'               => '{"key":"$(key)","hash":"$(etag)","fname":"$(fname)","fprefix":"$(fprefix)","mimeType":"$(mimeType)","fsize":"$(fsize)","bucket":"$(bucket)"}',
         'enableCallbackServer'     => true,
-        'callbackUrl'              => env('qiniu_cloud.callback_url', (empty($_SERVER['host']) ? '' : $_SERVER['host']) . '/v1/qiniu/notify'),
+        'callbackUrl'              => env('qiniu-cloud.callback-url', (empty($_SERVER['host']) ? '' : $_SERVER['host']) . '/v1/qiniu/notify'),
         'callbackBodyType'         => 'application/json',
         'callbackBody'             => '{"key":"$(key)","hash":"$(etag)","fname":"$(fname)","fprefix":"$(fprefix)","mimeType":"$(mimeType)","fsize":"$(fsize)","bucket":"$(bucket)"}',
     ],
@@ -48,14 +49,14 @@ return [
 
     /* 阿里云相关配置 */
     'ali_cloud'           => [
-        'access_key'               => env('ali_cloud.access_key'),
-        'access_secret'            => env('ali_cloud.access_secret'),
+        'access_key'               => env('ali-cloud.access-key'),
+        'access_secret'            => env('ali-cloud.access-secret'),
         'sms'                      => [
-            'sign_name'                         => env('ali_cloud.sign_name'),
-            'expire_time'                       => env('ali_cloud.expire_time'), //验证码超时秒数
-            'code_cache_prefix' => env('ali_cloud.code_cache_prefix'), //验证码缓存前缀
+            'sign_name'                         => env('ali-cloud.sign-name'),
+            'expire_time'                       => env('ali-cloud.expire-time'), //验证码超时秒数
+            'code_cache_prefix' => env('ali-cloud.code-cache-prefix'), //验证码缓存前缀
             'tpl'                               => [
-                'user_verify'                               => env('ali_cloud.tpl_user_verify'), //身份验证验证码
+                'user_verify'                               => env('ali-cloud.tpl-user-verify'), //身份验证验证码
             ]
         ]
     ]

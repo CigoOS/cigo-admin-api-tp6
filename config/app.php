@@ -20,9 +20,9 @@ return [
     // 开启多域名访问
     'auto_multi_app'   => true,
     // 应用映射（自动多应用模式有效）
-    'app_map' => json_decode(env('server.app_map', '[]'), true), //Tips_Flags 创新域名绑定配置
+    'app_map' => json_decode(env('server.app-map', '[]'), true), //Tips_Flags 创新域名绑定配置
     // 域名绑定（自动多应用模式有效）
-    'domain_bind' => json_decode(env('server.domain_bind', '[]'), true), //Tips_Flags 创新域名绑定配置
+    'domain_bind' => json_decode(env('server.domain-bind', '[]'), true), //Tips_Flags 创新域名绑定配置
 
     //----------------------------------------------------------------------------------------------------------
 
