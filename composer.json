@@ -18,12 +18,17 @@
   "require": {
     "php": ">=7.1.0",
     "cigoos/cigo-admin-api-core-tp6": "dev-master",
+    "cigoos/cigo-admin-api-install-tp6": "dev-master",
     "topthink/think-multi-app": "^1.0"
   },
   "repositories": {
-    "cigoos": {
+    "cigoos-core": {
       "type": "path",
       "url": "../cigo-admin-api-core-tp6"
+    },
+    "cigoos-install": {
+      "type": "path",
+      "url": "../cigo-admin-api-install-tp6"
     }
   },
   "autoload": {
