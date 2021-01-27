@@ -21,7 +21,7 @@
     "topthink/think-multi-app": "^1.0"
   },
   "repositories": {
-    "cigoos": {
+    "cigoos-api-core": {
       "type": "path",
       "url": "../cigo-admin-api-core-tp6"
     }
