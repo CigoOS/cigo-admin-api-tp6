@@ -1,6 +1,6 @@
 <?php
 
-use app\middleware\DemoShow;
+use cigoadmin\middleware\DemoShow;
 use think\facade\Route;
 
 // 根路由

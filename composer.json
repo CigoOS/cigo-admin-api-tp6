@@ -20,6 +20,12 @@
     "cigoos/cigo-admin-api-core-tp6": "dev-master",
     "topthink/think-multi-app": "^1.0"
   },
+  "repositories": {
+    "cigoos-api-core": {
+      "type": "path",
+      "url": "../cigo-admin-api-core-tp6"
+    }
+  },
   "autoload": {
     "psr-4": {
       "app\\": "app"
