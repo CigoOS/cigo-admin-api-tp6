@@ -10,8 +10,8 @@ Route::get('/', '/Index/index');
  */
 Route::get("/test", "/test/token");
 
-Route::post("/:version/qiniu/token", ":version.qiniu/token");//获取七牛云凭证
-Route::post("/:version/qiniu/notify", ":version.notify/qiniu");//七牛云异步通知
+Route::post("/:version/cloud/token", ":version.qiniu/token"); //获取七牛云凭证
+Route::post("/:version/qiniu/notify", ":version.notify/qiniu"); //七牛云异步通知
 Route::post(":version/phoneLogin", ":version.user/loginByPhone"); //登录
 
 /**********************************************************************************************************************/

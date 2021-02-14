@@ -42,7 +42,7 @@ Route::get("/:version/menu/both", ":version.menu/both");//获取树形和基础�
 Route::post(":version/login", ":version.manager/login"); //登录
 
 Route::post("/:version/file", ":version.file/upload");//本地文件上传
-Route::post("/:version/qiniu/token", ":version.qiniu/token");//获取七牛云凭证
+Route::post("/:version/cloud/token", ":version.qiniu/token");//获取七牛云凭证
 Route::post("/:version/qiniu/notify", ":version.notify/qiniu");//七牛云异步通知
 Route::post("/:version/sendSmsCode", ":version.tools/sendSmsCode");//发送短信验证码
 
