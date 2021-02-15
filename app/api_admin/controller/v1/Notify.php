@@ -1,5 +1,6 @@
 <?php
-declare (strict_types=1);
+
+declare(strict_types=1);
 
 namespace app\api_admin\controller\v1;
 
@@ -15,6 +16,15 @@ class Notify extends ApiBase
      */
     public function qiniu()
     {
-        return $this->qiniuNotify();
+        return $this->cloudQiniuNotify();
+    }
+
+
+    /**
+     * 腾讯云文件上传通知
+     */
+    public function tencent()
+    {
+        return $this->cloudTencentNotify();
     }
 }
