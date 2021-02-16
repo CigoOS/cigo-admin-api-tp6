@@ -34,9 +34,24 @@ return [
 
     /* 七牛云配置参数 */
     'qiniu_cloud'         => [
-        'AccessKey'                => env('qiniu-cloud.access-key', ''),
-        'SecretKey'                => env('qiniu-cloud.secret-key', ''),
-        'host'                     => 'upload-z2.qiniup.com',
+        'AccessKey'                => env('qiniu-cloud.access-key', '***'),
+        'SecretKey'                => env('qiniu-cloud.secret-key', '***'),
+        'host'                     => env('qiniu-cloud.host', 'upload-z2.qiniup.com'),
+        'bucketList'      => [
+            "open"                 => env('qiniu-cloud.cdn-bucket-open', 'cdn-open'),
+            "img"                  => env('qiniu-cloud.cdn-bucket-img', 'cdn-img'),
+            "video"                => env('qiniu-cloud.cdn-bucket-video', 'cdn-video'),
+        ],
+        'domainLinkBucket'      => [
+            'cdn-open-domain'      => env('qiniu-cloud.cdn-bucket-open', 'cdn-open'),
+            'cdn-img-domain'       => env('qiniu-cloud.cdn-bucket-img', 'cdn-img'),
+            'cdn-video-domain'     => env('qiniu-cloud.cdn-bucket-video', 'cdn-video'),
+        ],
+        'domainList'      => [
+            "cdn-open-domain"      => env('qiniu-cloud.cdn-open-domain', 'cdn-open-domain'),
+            "cdn-img-domain"       => env('qiniu-cloud.cdn-img-domain', 'cdn-img-domain'),
+            "cdn-video-domain"     => env('qiniu-cloud.cdn-video-domain', 'cdn-video-domain'),
+        ],
         'tokenExpireTime'          => env('qiniu-cloud.link-timeout', 3600),
         'returnBody'               => '{"key":"$(key)","hash":"$(etag)","fname":"$(fname)","fprefix":"$(fprefix)","mimeType":"$(mimeType)","fsize":"$(fsize)","bucket":"$(bucket)"}',
         'enableCallbackServer'     => true,
