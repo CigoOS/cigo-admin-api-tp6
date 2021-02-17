@@ -52,12 +52,42 @@ return [
             "cdn-img-domain"       => env('qiniu-cloud.cdn-img-domain', 'cdn-img-domain'),
             "cdn-video-domain"     => env('qiniu-cloud.cdn-video-domain', 'cdn-video-domain'),
         ],
-        'tokenExpireTime'          => env('qiniu-cloud.link-timeout', 3600),
+        'tokenDuration'          => env('tencent-cloud.token-duration', 1800),
+        'linkTimeout'          => env('tencent-cloud.link-timeout', 3600),
         'returnBody'               => '{"key":"$(key)","hash":"$(etag)","fname":"$(fname)","fprefix":"$(fprefix)","mimeType":"$(mimeType)","fsize":"$(fsize)","bucket":"$(bucket)"}',
         'enableCallbackServer'     => true,
         'callbackUrl'              => env('qiniu-cloud.callback-url', (empty($_SERVER['host']) ? '' : $_SERVER['host']) . '/v1/qiniu/notify'),
         'callbackBodyType'         => 'application/json',
         'callbackBody'             => '{"key":"$(key)","hash":"$(etag)","fname":"$(fname)","fprefix":"$(fprefix)","mimeType":"$(mimeType)","fsize":"$(fsize)","bucket":"$(bucket)"}',
+    ],
+
+    //----------------------------------------------------------------------------------------------------------
+
+    /* 腾讯云配置参数 */
+    'tencent_cloud'         => [
+        'AppId'                    => env('tencent-cloud.app-id', '***'),
+        'SecretId'                 => env('tencent-cloud.secret-id', '***'),
+        'SecretKey'                => env('tencent-cloud.secret-key', '***'),
+        'region'                     => env('tencent-cloud.region', 'ap-nanjing'),
+        'bucketList'      => [
+            "open"                 => env('tencent-cloud.cdn-bucket-open', 'cdn-open'),
+            "img"                  => env('tencent-cloud.cdn-bucket-img', 'cdn-img'),
+            "video"                => env('tencent-cloud.cdn-bucket-video', 'cdn-video'),
+        ],
+        'domainLinkBucket'      => [
+            'cdn-open-domain'      => env('tencent-cloud.cdn-bucket-open', 'cdn-open'),
+            'cdn-img-domain'       => env('tencent-cloud.cdn-bucket-img', 'cdn-img'),
+            'cdn-video-domain'     => env('tencent-cloud.cdn-bucket-video', 'cdn-video'),
+        ],
+        'domainList'      => [
+            "cdn-open-domain"      => env('tencent-cloud.cdn-open-domain', 'cdn-open-domain'),
+            "cdn-img-domain"       => env('tencent-cloud.cdn-img-domain', 'cdn-img-domain'),
+            "cdn-video-domain"     => env('tencent-cloud.cdn-video-domain', 'cdn-video-domain'),
+        ],
+        'tokenDuration'          => env('tencent-cloud.token-duration', 1800),
+        'linkTimeout'          => env('tencent-cloud.link-timeout', 3600000),
+        'callbackUrl'              => env('tencent-cloud.callback-url', (empty($_SERVER['host']) ? '' : $_SERVER['host']) . '/v1/qiniu/notify'),
+        'callbackBodyType'         => 'application/json',
     ],
 
     //----------------------------------------------------------------------------------------------------------
