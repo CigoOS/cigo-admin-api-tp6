@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace app\api_admin\controller\v1;
 
 use app\api_admin\library\ApiBase;
-use cigoadmin\controller\UploadCloud;
+use cigoadmin\controller\FileUpload;
 
 class Notify extends ApiBase
 {
-    use UploadCloud;
+    use FileUpload;
 
     /**
      * 七牛云文件上传通知
