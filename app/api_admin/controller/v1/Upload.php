@@ -23,22 +23,6 @@ class Upload extends CommonV1
 
     public function token()
     {
-        $res = false;
-
-        switch (env('cigo-admin.file-save-type')) {
-            case 'cloudQiniu':
-                $res = $this->makeCloudQiniuToken();
-                break;
-            case 'cloudAliyun':
-                $res = $this->makeCloudAliyunToken();
-                break;
-            case 'cloudTencent':
-                $res = $this->makeCloudTencentToken();
-                break;
-            default:
-                $res = $this->makeApiReturn("系统云存储配置错误", [], ErrorCode::ServerError_OTHER_ERROR, HttpReponseCode::ServerError_InternalServer_Error);
-                break;
-        }
-        return $res;
+        return $this->makeToken();
     }
 }

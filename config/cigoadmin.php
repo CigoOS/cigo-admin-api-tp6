@@ -52,8 +52,8 @@ return [
             "cdn-img-domain"       => env('qiniu-cloud.cdn-img-domain', 'cdn-img-domain'),
             "cdn-video-domain"     => env('qiniu-cloud.cdn-video-domain', 'cdn-video-domain'),
         ],
-        'tokenDuration'          => env('tencent-cloud.token-duration', 1800),
-        'linkTimeout'          => env('tencent-cloud.link-timeout', 3600),
+        'tokenDuration'            => intval(env('qiniu-cloud.token-duration', 1800)),
+        'linkTimeout'              => intval(env('qiniu-cloud.link-timeout', 3600)),
         'returnBody'               => '{"key":"$(key)","hash":"$(etag)","fname":"$(fname)","fprefix":"$(fprefix)","mimeType":"$(mimeType)","fsize":"$(fsize)","bucket":"$(bucket)"}',
         'enableCallbackServer'     => true,
         'callbackUrl'              => env('qiniu-cloud.callback-url', (empty($_SERVER['host']) ? '' : $_SERVER['host']) . '/v1/qiniu/notify'),
@@ -65,7 +65,6 @@ return [
 
     /* 腾讯云配置参数 */
     'tencent_cloud'         => [
-        'AppId'                    => env('tencent-cloud.app-id', '***'),
         'SecretId'                 => env('tencent-cloud.secret-id', '***'),
         'SecretKey'                => env('tencent-cloud.secret-key', '***'),
         'region'                     => env('tencent-cloud.region', 'ap-nanjing'),
@@ -84,9 +83,11 @@ return [
             "cdn-img-domain"       => env('tencent-cloud.cdn-img-domain', 'cdn-img-domain'),
             "cdn-video-domain"     => env('tencent-cloud.cdn-video-domain', 'cdn-video-domain'),
         ],
-        'tokenDuration'          => env('tencent-cloud.token-duration', 1800),
-        'linkTimeout'          => env('tencent-cloud.link-timeout', 3600000),
-        'callbackUrl'              => env('tencent-cloud.callback-url', (empty($_SERVER['host']) ? '' : $_SERVER['host']) . '/v1/qiniu/notify'),
+        'tokenDuration'            => intval(env('tencent-cloud.token-duration', 1800)),
+        'linkTimeout'              => env('tencent-cloud.link-timeout', '+24 hours'),
+        'prefix'                   => env('tencent-cloud.prefix', '*'),
+        'cdnScheme'                => env('tencent-cloud.cdn-scheme', 'https://'),
+        'callbackUrl'              => env('tencent-cloud.callback-url', (empty($_SERVER['host']) ? '' : $_SERVER['host']) . '/v1/tencent/notify'),
         'callbackBodyType'         => 'application/json',
     ],
 
